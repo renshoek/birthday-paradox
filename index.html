@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Paradox Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Birthday Paradox Visualizer</h1>
+            <p>Nodes represent people. Colors represent birth dates.</p>
+            <p class="sub-text">Nodes with similar birthdays attract. Matches are connected.</p>
+        </header>
+
+        <div class="controls">
+            <div class="input-group">
+                <label for="peopleCount">Room Size (People):</label>
+                <input type="number" id="peopleCount" value="23" min="2" max="100">
+            </div>
+            <button id="startBtn">Run Simulation</button>
+        </div>
+
+        <div class="stats">
+            <span>Matches Found: <strong id="matchCount">0</strong></span>
+            <span>Probability (Math): <strong id="probMath">50.7%</strong></span>
+        </div>
+
+        <canvas id="simCanvas"></canvas>
+    </div>
+<div class="debug-panel">
+    <h3>Physics Debug</h3>
+    
+    <div class="control-row">
+        <label>Attraction Force: <span id="val-attr-force">0.03</span></label>
+        <input type="range" id="in-attr-force" min="0" max="0.2" step="0.001" value="0.03">
+    </div>
+
+    <div class="control-row">
+        <label>Attraction Days: <span id="val-attr-range">40</span></label>
+        <input type="range" id="in-attr-range" min="0" max="100" step="1" value="40">
+    </div>
+
+    <hr>
+
+    <div class="control-row">
+        <label>Repulsion Force: <span id="val-rep-force">0.005</span></label>
+        <input type="range" id="in-rep-force" min="0" max="0.1" step="0.001" value="0.005">
+    </div>
+
+    <div class="control-row">
+        <label>Repulsion Days: <span id="val-rep-range">100</span></label>
+        <input type="range" id="in-rep-range" min="0" max="180" step="1" value="100">
+    </div>
+    
+    <div class="control-row">
+        <label>Repulsion Distance: <span id="val-rep-dist">100</span>px</label>
+        <input type="range" id="in-rep-dist" min="0" max="300" step="5" value="100">
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+    <script src="script.js"></script>
+</html>

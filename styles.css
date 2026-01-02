@@ -1,0 +1,156 @@
+:root {
+    --bg-color: #121212;
+    --panel-color: #1e1e1e;
+    --text-color: #e0e0e0;
+    --accent-color: #00bcd4;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    margin: 0;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.sub-text {
+    font-size: 0.9rem;
+    color: #888;
+    margin-top: 5px;
+}
+
+.controls {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin-bottom: 15px;
+    background: var(--panel-color);
+    padding: 15px 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    background: #333;
+    border: 1px solid #444;
+    color: white;
+    padding: 5px;
+    border-radius: 4px;
+    font-size: 1rem;
+    width: 80px;
+}
+
+button {
+    background-color: var(--accent-color);
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: transform 0.1s, background-color 0.2s;
+    height: 100%;
+    margin-top: auto;
+}
+
+button:hover {
+    background-color: #00e5ff;
+    transform: scale(1.05);
+}
+
+.stats {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+canvas {
+    background-color: #000;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    cursor: crosshair;
+}
+
+/* Debug Panel Styles */
+.debug-panel {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(30, 30, 30, 0.9);
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #444;
+    width: 250px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    color: #fff;
+    font-size: 0.85rem;
+    z-index: 100;
+}
+
+.debug-panel h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: var(--accent-color);
+    border-bottom: 1px solid #444;
+    padding-bottom: 5px;
+}
+
+.control-row {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.control-row label {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3px;
+    font-weight: bold;
+    color: #ccc;
+}
+
+.control-row span {
+    color: var(--accent-color);
+    font-family: monospace;
+}
+
+input[type=range] {
+    width: 100%;
+    cursor: pointer;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #444;
+    margin: 10px 0;
+}
